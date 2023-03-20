@@ -1,0 +1,5 @@
+k_category,total hucs,compared hucs,no IFI fp,no k_fp,no k_fp overlap
+FN1_flood_reduction,662,293,14,369,0
+FN2_sediment_reduction,662,279,14,383,0
+FN3_organic_solute_reduction,662,NA,NA,NA,NA
+FN4_habitat_provisioning,662,320,14,342,0
