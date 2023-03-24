@@ -72,8 +72,17 @@ calculatePercentages <- function(df, hucSF, fpSF, K_rast, K_index){
 #' @return plotly scatter plot object 
 getFigure <- function(data){
   p1 <- ggplot(data, aes(x=ifi_measure_Flood, y=k_percentArea)) +
-    geom_abline(intercept = 0, slope = 1, color = "#3B22F5")+
-    geom_point()
+    geom_abline(size = 1.5, intercept = 0, slope = 1, color = "#6F7378" ,
+                linetype = 'dotted',)+
+    annotate(geom = "text", x = 0.15, y = 0.2, label = "1:1 line",
+             color = "#6F7378",
+             angle = 45)+
+    geom_point(color="#E69F00",  size=1.5)+
+    theme_pander()+
+    scale_x_continuous(expand = c(0, 0), limits = c(-0.05, 1.05))+
+    theme(plot.margin=unit(c(1,1,1,1), 'cm'))
+    
+
   #return(plotly::ggplotly(p1))
   ## keeping this 
   return(p1)
